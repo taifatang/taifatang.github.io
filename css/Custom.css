@@ -1,0 +1,125 @@
+﻿/*body {
+    text-align: center;
+    color: #fff;
+    background-attachment: scroll;
+    background-image: url(../img/image4.jpg);
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}*/
+
+.jumbotron{
+    background-size: cover;
+}
+#welcome {
+    text-align:center;
+    background-size: cover;
+    font-family: 'Indie Flower', cursive, Arial, sans-serif;
+    font-size: 128px;
+}
+body {
+    background-image: url(../img/image4.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
+
+hr.hrStyle1 {
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+    width:50%;
+}
+hr.hrStyle1:after {
+	//content: url(../img/thumbs-up.png);
+	display: inline-block;
+	position: relative;
+	top: -15px;
+	padding: 0 0.5em;
+	background: #f0f0f0;
+	color: #8c8b8b;
+	font-size: 18px;
+}
+
+.navbar-header{
+    float:none;
+}
+#tangodev{
+    text-align:center;
+    color: WHITE;
+    //text-transform: uppercase;
+    font-family: 'Pacifico', 'Indie Flower', cursive,  Arial, sans-serif;
+    padding-bottom: 10px;
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:200%;
+
+}
+#taifatang {
+    font-family:  "Kaushan Script", 'Indie Flower', cursive,  Arial, sans-serif;
+    margin-top:12px;
+    font-size:24px;
+}
+
+#taifatang
+{
+    text-align:right;
+    padding-right:50px;
+    color:red;
+    float:right
+}
+#tangodevimage{
+    width:5em;
+    height:5em;
+    border: 0px;
+    background-color:#C5C5C5;
+    padding-left:3px;
+    padding-right:3px;
+    display:inline;
+    border-radius:50%;
+}
+@media only screen and (max-width: 750px) and (min-width: 450px){
+    #taifatang {
+        visibility: hidden;
+    }
+        #tangodev {
+            padding-left: 40px;
+        }
+    #tangodevimage {
+        display: block;
+        left: 160px;
+    }
+}
+@media only screen and (max-width: 450px) and (min-width: 200px){
+    #taifatang {
+        visibility: hidden;
+    }
+
+    #tangodevimage {
+        display: block;
+        left:50px;
+    }
+}
+    @media only screen and (max-width: 550px) {
+
+        #welcome {
+            font-size: 80px;
+        }
+                #tangodev {
+            padding-left: 40px;
+        }
+
+                #taifatang {
+            visibility: hidden;
+        }
+    }
+}
+
+#header-tang {
+   font-family: 'Pacifico', 'Indie Flower', cursive,  Arial, sans-serif;
+
+}
