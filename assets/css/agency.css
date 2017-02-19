@@ -898,9 +898,9 @@ body {
     filter: alpha(Opacity=90);
 }
 #special-quote {
- font-family: 'Petit Formal Script', Helvetica,Arial,sans-serif;
- font-size:22px;
- color:white;
+   font-family: 'Petit Formal Script', Helvetica,Arial,sans-serif;
+   font-size:22px;
+   color:white;
 }
 #inspiration {
     color:white;
@@ -988,9 +988,9 @@ body {
 }
 
 #header-tang {
- font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
- font-weight:500;
- 
+   font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+   font-weight:500;
+
 }
 #meimage {
     margin-left:auto;
@@ -1000,13 +1000,13 @@ body {
     
 }
 #navbarcolor{
-    
+
     border:1px solid;
     border-bottom-color:white;
 
 }
 #contactussub1 {
-    
+
     text-align: center; /* centers the in-line elements contained within */
     margin: -35px auto 40px auto; // centers the container in the page
 }
@@ -1018,17 +1018,21 @@ body {
                               and shrink the element to fit its text */
                               text-align: left;
                               color:white;
-                          }
-                          #jumbo1 {
-                            background-color: rgba(245, 245, 245, 0.9); 
-                            margin-top:-70px;
-                            margin-bottom:-100px;
+}
+#jumbo1 {
+    background-color: rgba(245, 245, 245, 0.9); 
+    margin-top:-70px;
+    margin-bottom:-100px;
 
-                        }
-                        .bg-dark-grey{
-                            background-color:#F2F2F2;
-                        }
+}
+.bg-dark-grey{
+    background-color:#F2F2F2;
+}
 
-                        .text-white{
-                            color:#B7B7B7;
-                        }
+.text-white{
+    color:#B7B7B7;
+}
+.text-align-left {
+    text-align: left;
+}
+

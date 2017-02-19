@@ -13,6 +13,16 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+
+    var viewPortHeight = $(window).height();
+    $('#headerimg').css({height: viewPortHeight});
+
+    var template = new Template();
+
+    var markDownBuilder = MarkDownBuilder.getInstance();
+
+    markDownBuilder.build("modal3MarkDown", template.modal3());
+    markDownBuilder.build("modal4MarkDown", template.modal4());
 });
 
 // Highlight the top nav as scrolling occurs
@@ -24,8 +34,3 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
-
-$(document).ready(function(){
-        var viewPortHeight = $(window).height();
-                    $('#headerimg').css({height: viewPortHeight});
-    });
