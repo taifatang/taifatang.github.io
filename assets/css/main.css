@@ -1,6 +1,9 @@
  body {
-    overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+html {
+    overflow-x: clip;
 }
 
 .bold {
@@ -625,6 +628,11 @@ li.timeline-heading-entry h3 {
         padding: 0;
         text-align: left;
     }
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
 @media (max-width: 767px) and (max-height: 750px) {
@@ -1342,10 +1350,6 @@ ul.social-buttons li {
 }
 .text-align-left {
     text-align: left;
-}
-
-html {
-    scroll-snap-type: y mandatory;
 }
 
 header {
