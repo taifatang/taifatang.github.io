@@ -19,8 +19,6 @@ $(function() {
         event.preventDefault();
     });
 
-    var viewPortHeight = $(window).height();
-    $('#headerimg').css({height: viewPortHeight});
 
 });
 

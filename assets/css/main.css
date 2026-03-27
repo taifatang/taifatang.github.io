@@ -1000,8 +1000,11 @@ ul.social-buttons li {
 
 }
 #headerimg {
-    position:relative;
-    padding-bottom:55px;
+    position: relative;
+    height: 100vh;
+    height: 100svh;
+    padding-bottom: 55px;
+    box-sizing: border-box;
 }
 
 @media (max-width:405px) {
