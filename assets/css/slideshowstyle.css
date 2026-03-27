@@ -30,13 +30,14 @@
     -ms-animation: imageAnimation 48s linear infinite 0s;
     animation: imageAnimation 48s linear infinite 0s;
 }
-.cb-slideshow li div { 
+.cb-slideshow li div {
     z-index: 1000;
     position: absolute;
-    bottom: 30px;
-    left: 0px;
-    width: 100%;
-    text-align: center;
+    bottom: 16px;
+    right: 20px;
+    left: auto;
+    width: auto;
+    text-align: right;
     opacity: 0;
     color: #fff;
     -webkit-animation: titleAnimation 48s linear infinite 0s;
@@ -45,11 +46,15 @@
     -ms-animation: titleAnimation 48s linear infinite 0s;
     animation: titleAnimation 48s linear infinite 0s;
 }
-.cb-slideshow li div h3 { 
-    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
-    font-size: 240px;
+.cb-slideshow li div h3 {
+    font-family: Montserrat, sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     padding: 0;
-    line-height: 200px; 
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.75);
 }
 .cb-slideshow li:nth-child(1) span { 
     background-image: url(../img/carousel/1.jpg) 
@@ -251,9 +256,6 @@
     .cb-slideshow li div h3 { font-size: 80px }
 }
 
-#h3font {
-    font-size:200%;
-}
 #backgroundimg {
     text-align: center;
     color: #fff;
