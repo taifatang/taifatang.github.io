@@ -544,7 +544,10 @@
             var scrollTop = window.scrollY || document.documentElement.scrollTop;
             var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
             if (scrollTop >= maxScroll - 10) {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                $('html').css('scroll-snap-type', 'none');
+                $('html, body').stop().animate({ scrollTop: 0 }, 1500, 'easeInOutExpo', function() {
+                    $('html').css('scroll-snap-type', 'y mandatory');
+                });
             } else {
                 window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
             }
