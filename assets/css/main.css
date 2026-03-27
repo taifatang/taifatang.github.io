@@ -632,7 +632,6 @@ li.timeline-heading-entry h3 {
 
 html {
     scroll-snap-type: y mandatory;
-    -webkit-overflow-scrolling: touch;
 }
 
 @media (max-width: 767px) and (max-height: 750px) {
