@@ -35,7 +35,7 @@ document.addEventListener('keydown', function(e) {
     if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
     if (document.activeElement && ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
 
-    var snapTargets = Array.from(document.querySelectorAll('header, section, .timeline > li'));
+    var snapTargets = Array.from(document.querySelectorAll('header, section:not(.timeline-section), .timeline > li'));
     var scrollTop = window.scrollY;
 
     var currentIndex = 0;
