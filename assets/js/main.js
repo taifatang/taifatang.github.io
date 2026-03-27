@@ -9,12 +9,10 @@ $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         var href = $anchor.attr('href');
-        $('html').css('scroll-snap-type', 'none');
-        $('html, body').stop().animate({
-            scrollTop: $(href).offset().top
-        }, 1500, 'easeInOutExpo', function() {
-            $('html').css('scroll-snap-type', 'y mandatory');
-        });
+        var target = document.querySelector(href);
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
         history.pushState(null, null, href);
         event.preventDefault();
     });
@@ -30,4 +28,30 @@ $('body').scrollspy({
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
+});
+
+// Arrow key navigation between snap targets
+document.addEventListener('keydown', function(e) {
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    if (document.activeElement && ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
+
+    var snapTargets = Array.from(document.querySelectorAll('header, section, .timeline > li'));
+    var scrollTop = window.scrollY;
+
+    var currentIndex = 0;
+    for (var i = 0; i < snapTargets.length; i++) {
+        var top = snapTargets[i].getBoundingClientRect().top + scrollTop;
+        if (top <= scrollTop + 10) {
+            currentIndex = i;
+        }
+    }
+
+    var targetIndex = e.key === 'ArrowDown'
+        ? Math.min(currentIndex + 1, snapTargets.length - 1)
+        : Math.max(currentIndex - 1, 0);
+
+    if (targetIndex !== currentIndex) {
+        e.preventDefault();
+        snapTargets[targetIndex].scrollIntoView({ behavior: 'smooth' });
+    }
 });
