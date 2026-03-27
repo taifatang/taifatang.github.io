@@ -517,7 +517,7 @@ li.timeline-heading-entry h3 {
     height: 180px;
     border-radius: 10px;
     border: none;
-    background: #fff;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -891,9 +891,6 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #fed136;
-}
-#aboutimage{
-    background-color: transparent;
 }
 
 .timeline-section .timeline-heading h4,
