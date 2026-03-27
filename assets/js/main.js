@@ -30,6 +30,29 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
+// Portfolio touch handling for mobile
+(function() {
+    var items = document.querySelectorAll('.portfolio-banner-item');
+
+    function clearActive() {
+        items.forEach(function(item) { item.classList.remove('touch-active'); });
+    }
+
+    items.forEach(function(item) {
+        item.addEventListener('touchstart', function(e) {
+            var isActive = item.classList.contains('touch-active');
+            clearActive();
+            if (!isActive) {
+                item.classList.add('touch-active');
+            }
+            e.stopPropagation();
+        }, { passive: true });
+    });
+
+    document.addEventListener('touchstart', clearActive, { passive: true });
+    window.addEventListener('scroll', clearActive, { passive: true });
+})();
+
 // Arrow key navigation between snap targets
 document.addEventListener('keydown', function(e) {
     if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
