@@ -431,6 +431,26 @@ section h3.section-subheading {
     }
 }
 
+li.timeline-heading-entry {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    text-align: center;
+    padding: 0 !important;
+    list-style: none;
+}
+li.timeline-heading-entry h2 {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+}
+li.timeline-heading-entry h3 {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+}
 .timeline-section {
     position: relative;
     padding: 0;
@@ -644,6 +664,7 @@ aside.clients img {
 }
 
 section#contact {
+    position: relative;
     background-color: #222;
     background-image: url(../img/contactme.jpg);
     background-position: center;
@@ -1007,6 +1028,17 @@ ul.social-buttons li {
     color: #ccc;
     text-decoration: none;
 }
+.contact-photo-caption {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+}
 .contact-icon {
     font-size: 18px;
     color: rgba(255, 255, 255, 0.6);
@@ -1135,6 +1167,13 @@ ul.social-buttons li {
 }
 .bg-dark-grey{
     background-color: #F2F2F2;
+}
+#about, #documents {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+    box-sizing: border-box;
 }
 
 .text-white{
