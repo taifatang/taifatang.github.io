@@ -229,7 +229,8 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .nav li a:hover::after,
-.navbar-default .nav li a:focus::after {
+.navbar-default .nav li a:focus::after,
+.navbar-default .navbar-nav>.active>a::after {
     left: 10px;
     right: 10px;
 }
@@ -456,7 +457,7 @@ li.timeline-heading-entry {
     justify-content: center !important;
     gap: 0 !important;
     text-align: center;
-    padding: 0 !important;
+    padding: 80px 16px 40px !important;
     list-style: none;
 }
 li.timeline-heading-entry h2 {
@@ -494,8 +495,9 @@ li.timeline-heading-entry h3 {
 
 .timeline>li {
     position: relative;
-    height: 100vh;
+    height: auto;
     min-height: 100vh;
+    min-height: 100svh;
     margin-bottom: 0;
     scroll-snap-align: start;
     display: flex;
@@ -504,7 +506,7 @@ li.timeline-heading-entry h3 {
     justify-content: center;
     gap: 28px;
     box-sizing: border-box;
-    padding: 80px 32px 40px;
+    padding: 80px 24px 40px;
 }
 
 .timeline>li .timeline-image {
@@ -592,8 +594,9 @@ li.timeline-heading-entry h3 {
         justify-content: center;
         gap: 40px;
         padding: 60px 40px;
-        height: 100vh;
+        height: auto;
         min-height: 100vh;
+        min-height: 100svh;
         margin-bottom: 0;
     }
 
@@ -623,11 +626,39 @@ li.timeline-heading-entry h3 {
     }
 }
 
+@media (max-width: 767px) and (max-height: 750px) {
+    .timeline>li {
+        padding: 70px 20px 30px;
+        gap: 16px;
+        min-height: auto;
+        scroll-snap-align: none;
+    }
+
+    .timeline>li .timeline-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    html {
+        scroll-snap-type: none;
+    }
+
+    section {
+        scroll-snap-align: none;
+    }
+
+    #about, #documents {
+        min-height: auto;
+        padding: 70px 0 40px;
+    }
+}
+
 @media(min-width:992px) {
     .timeline>li {
         gap: 60px;
         padding: 60px 80px;
         min-height: 100vh;
+        min-height: 100svh;
     }
 
     .timeline>li .timeline-image {
@@ -645,6 +676,7 @@ li.timeline-heading-entry h3 {
         gap: 80px;
         padding: 60px 120px;
         min-height: 100vh;
+        min-height: 100svh;
     }
 
     .timeline>li .timeline-image {
