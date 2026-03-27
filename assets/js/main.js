@@ -9,9 +9,12 @@ $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         var href = $anchor.attr('href');
+        $('html').css('scroll-snap-type', 'none');
         $('html, body').stop().animate({
             scrollTop: $(href).offset().top
-        }, 1500, 'easeInOutExpo');
+        }, 1500, 'easeInOutExpo', function() {
+            $('html').css('scroll-snap-type', 'y mandatory');
+        });
         history.pushState(null, null, href);
         event.preventDefault();
     });
