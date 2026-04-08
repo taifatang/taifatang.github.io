@@ -24,11 +24,11 @@
     opacity: 0;
     z-index: -1;
 	-webkit-backface-visibility: hidden;
-    -webkit-animation: imageAnimation 48s linear infinite 0s;
-    -moz-animation: imageAnimation 48s linear infinite 0s;
-    -o-animation: imageAnimation 48s linear infinite 0s;
-    -ms-animation: imageAnimation 48s linear infinite 0s;
-    animation: imageAnimation 48s linear infinite 0s;
+    -webkit-animation: imageAnimation 60s linear infinite 0s;
+    -moz-animation: imageAnimation 60s linear infinite 0s;
+    -o-animation: imageAnimation 60s linear infinite 0s;
+    -ms-animation: imageAnimation 60s linear infinite 0s;
+    animation: imageAnimation 60s linear infinite 0s;
 }
 .cb-slideshow li div {
     z-index: 1000;
@@ -40,11 +40,11 @@
     text-align: right;
     opacity: 0;
     color: #fff;
-    -webkit-animation: titleAnimation 48s linear infinite 0s;
-    -moz-animation: titleAnimation 48s linear infinite 0s;
-    -o-animation: titleAnimation 48s linear infinite 0s;
-    -ms-animation: titleAnimation 48s linear infinite 0s;
-    animation: titleAnimation 48s linear infinite 0s;
+    -webkit-animation: titleAnimation 60s linear infinite 0s;
+    -moz-animation: titleAnimation 60s linear infinite 0s;
+    -o-animation: titleAnimation 60s linear infinite 0s;
+    -ms-animation: titleAnimation 60s linear infinite 0s;
+    animation: titleAnimation 60s linear infinite 0s;
 }
 .cb-slideshow li div h3 {
     font-family: Montserrat, sans-serif;
@@ -115,6 +115,22 @@
     -ms-animation-delay: 42s;
     animation-delay: 42s;
 }
+.cb-slideshow li:nth-child(9) span {
+    background-image: url(../img/carousel/9.jpg);
+    -webkit-animation-delay: 48s;
+    -moz-animation-delay: 48s;
+    -o-animation-delay: 48s;
+    -ms-animation-delay: 48s;
+    animation-delay: 48s;
+}
+.cb-slideshow li:nth-child(10) span {
+    background-image: url(../img/carousel/10.jpg);
+    -webkit-animation-delay: 54s;
+    -moz-animation-delay: 54s;
+    -o-animation-delay: 54s;
+    -ms-animation-delay: 54s;
+    animation-delay: 54s;
+}
 .cb-slideshow li:nth-child(2) div { 
     -webkit-animation-delay: 6s;
     -moz-animation-delay: 6s;
@@ -164,84 +180,90 @@
     -ms-animation-delay: 42s;
     animation-delay: 42s; 
 }
+.cb-slideshow li:nth-child(9) div { 
+    -webkit-animation-delay: 48s;
+    -moz-animation-delay: 48s;
+    -o-animation-delay: 48s;
+    -ms-animation-delay: 48s;
+    animation-delay: 48s; 
+}
+.cb-slideshow li:nth-child(10) div { 
+    -webkit-animation-delay: 54s;
+    -moz-animation-delay: 54s;
+    -o-animation-delay: 54s;
+    -ms-animation-delay: 54s;
+    animation-delay: 54s; 
+}
 /* Animation for the slideshow images */
-@-webkit-keyframes imageAnimation { 
+@-webkit-keyframes imageAnimation {
     0% { opacity: 0; -webkit-animation-timing-function: ease-in; }
-    6% { opacity: 1; -webkit-animation-timing-function: ease-out; }
-    12.5% { opacity: 1 }
-    18.75% { opacity: 0 }
+    3.33% { opacity: 1; -webkit-animation-timing-function: ease-out; }
+    6.67% { opacity: 1 }
+    10% { opacity: 0 }
     100% { opacity: 0 }
 }
-@-moz-keyframes imageAnimation { 
-    0% { opacity: 0;
-    -moz-animation-timing-function: ease-in; }
-    8% { opacity: 1;
-         -moz-animation-timing-function: ease-out; }
-    17% { opacity: 1 }
-    25% { opacity: 0 }
+@-moz-keyframes imageAnimation {
+    0% { opacity: 0; -moz-animation-timing-function: ease-in; }
+    3.33% { opacity: 1; -moz-animation-timing-function: ease-out; }
+    6.67% { opacity: 1 }
+    10% { opacity: 0 }
     100% { opacity: 0 }
 }
-@-o-keyframes imageAnimation { 
-    0% { opacity: 0;
-    -o-animation-timing-function: ease-in; }
-    8% { opacity: 1;
-         -o-animation-timing-function: ease-out; }
-    17% { opacity: 1 }
-    25% { opacity: 0 }
+@-o-keyframes imageAnimation {
+    0% { opacity: 0; -o-animation-timing-function: ease-in; }
+    3.33% { opacity: 1; -o-animation-timing-function: ease-out; }
+    6.67% { opacity: 1 }
+    10% { opacity: 0 }
     100% { opacity: 0 }
 }
-@-ms-keyframes imageAnimation { 
-    0% { opacity: 0;
-    -ms-animation-timing-function: ease-in; }
-    8% { opacity: 1;
-         -ms-animation-timing-function: ease-out; }
-    17% { opacity: 1 }
-    25% { opacity: 0 }
+@-ms-keyframes imageAnimation {
+    0% { opacity: 0; -ms-animation-timing-function: ease-in; }
+    3.33% { opacity: 1; -ms-animation-timing-function: ease-out; }
+    6.67% { opacity: 1 }
+    10% { opacity: 0 }
     100% { opacity: 0 }
 }
-@keyframes imageAnimation { 
-    0% { opacity: 0;
-    animation-timing-function: ease-in; }
-    8% { opacity: 1;
-         animation-timing-function: ease-out; }
-    17% { opacity: 1 }
-    25% { opacity: 0 }
+@keyframes imageAnimation {
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    3.33% { opacity: 1; animation-timing-function: ease-out; }
+    6.67% { opacity: 1 }
+    10% { opacity: 0 }
     100% { opacity: 0 }
 }
 /* Animation for the title */
-@-webkit-keyframes titleAnimation { 
+@-webkit-keyframes titleAnimation {
     0% { opacity: 0 }
-    6% { opacity: 1 }
-    12.5% { opacity: 1 }
-    14.5% { opacity: 0 }
+    3.33% { opacity: 1 }
+    6.67% { opacity: 1 }
+    8.5% { opacity: 0 }
     100% { opacity: 0 }
 }
-@-moz-keyframes titleAnimation { 
+@-moz-keyframes titleAnimation {
     0% { opacity: 0 }
-    6% { opacity: 1 }
-    12.5% { opacity: 1 }
-    14.5% { opacity: 0 }
+    3.33% { opacity: 1 }
+    6.67% { opacity: 1 }
+    8.5% { opacity: 0 }
     100% { opacity: 0 }
 }
-@-o-keyframes titleAnimation { 
+@-o-keyframes titleAnimation {
     0% { opacity: 0 }
-    6% { opacity: 1 }
-    12.5% { opacity: 1 }
-    14.5% { opacity: 0 }
+    3.33% { opacity: 1 }
+    6.67% { opacity: 1 }
+    8.5% { opacity: 0 }
     100% { opacity: 0 }
 }
-@-ms-keyframes titleAnimation { 
+@-ms-keyframes titleAnimation {
     0% { opacity: 0 }
-    6% { opacity: 1 }
-    12.5% { opacity: 1 }
-    14.5% { opacity: 0 }
+    3.33% { opacity: 1 }
+    6.67% { opacity: 1 }
+    8.5% { opacity: 0 }
     100% { opacity: 0 }
 }
-@keyframes titleAnimation { 
+@keyframes titleAnimation {
     0% { opacity: 0 }
-    6% { opacity: 1 }
-    12.5% { opacity: 1 }
-    14.5% { opacity: 0 }
+    3.33% { opacity: 1 }
+    6.67% { opacity: 1 }
+    8.5% { opacity: 0 }
     100% { opacity: 0 }
 }
 /* Show at least something when animations not supported */
