@@ -198,72 +198,72 @@
 @-webkit-keyframes imageAnimation {
     0% { opacity: 0; -webkit-animation-timing-function: ease-in; }
     3.33% { opacity: 1; -webkit-animation-timing-function: ease-out; }
-    6.67% { opacity: 1 }
-    10% { opacity: 0 }
+    13.33% { opacity: 1 }
+    16.67% { opacity: 0 }
     100% { opacity: 0 }
 }
 @-moz-keyframes imageAnimation {
     0% { opacity: 0; -moz-animation-timing-function: ease-in; }
     3.33% { opacity: 1; -moz-animation-timing-function: ease-out; }
-    6.67% { opacity: 1 }
-    10% { opacity: 0 }
+    13.33% { opacity: 1 }
+    16.67% { opacity: 0 }
     100% { opacity: 0 }
 }
 @-o-keyframes imageAnimation {
     0% { opacity: 0; -o-animation-timing-function: ease-in; }
     3.33% { opacity: 1; -o-animation-timing-function: ease-out; }
-    6.67% { opacity: 1 }
-    10% { opacity: 0 }
+    13.33% { opacity: 1 }
+    16.67% { opacity: 0 }
     100% { opacity: 0 }
 }
 @-ms-keyframes imageAnimation {
     0% { opacity: 0; -ms-animation-timing-function: ease-in; }
     3.33% { opacity: 1; -ms-animation-timing-function: ease-out; }
-    6.67% { opacity: 1 }
-    10% { opacity: 0 }
+    13.33% { opacity: 1 }
+    16.67% { opacity: 0 }
     100% { opacity: 0 }
 }
 @keyframes imageAnimation {
     0% { opacity: 0; animation-timing-function: ease-in; }
     3.33% { opacity: 1; animation-timing-function: ease-out; }
-    6.67% { opacity: 1 }
-    10% { opacity: 0 }
+    13.33% { opacity: 1 }
+    16.67% { opacity: 0 }
     100% { opacity: 0 }
 }
 /* Animation for the title */
 @-webkit-keyframes titleAnimation {
     0% { opacity: 0 }
     3.33% { opacity: 1 }
-    6.67% { opacity: 1 }
-    8.5% { opacity: 0 }
+    10% { opacity: 1 }
+    13.33% { opacity: 0 }
     100% { opacity: 0 }
 }
 @-moz-keyframes titleAnimation {
     0% { opacity: 0 }
     3.33% { opacity: 1 }
-    6.67% { opacity: 1 }
-    8.5% { opacity: 0 }
+    10% { opacity: 1 }
+    13.33% { opacity: 0 }
     100% { opacity: 0 }
 }
 @-o-keyframes titleAnimation {
     0% { opacity: 0 }
     3.33% { opacity: 1 }
-    6.67% { opacity: 1 }
-    8.5% { opacity: 0 }
+    10% { opacity: 1 }
+    13.33% { opacity: 0 }
     100% { opacity: 0 }
 }
 @-ms-keyframes titleAnimation {
     0% { opacity: 0 }
     3.33% { opacity: 1 }
-    6.67% { opacity: 1 }
-    8.5% { opacity: 0 }
+    10% { opacity: 1 }
+    13.33% { opacity: 0 }
     100% { opacity: 0 }
 }
 @keyframes titleAnimation {
     0% { opacity: 0 }
     3.33% { opacity: 1 }
-    6.67% { opacity: 1 }
-    8.5% { opacity: 0 }
+    10% { opacity: 1 }
+    13.33% { opacity: 0 }
     100% { opacity: 0 }
 }
 /* Show at least something when animations not supported */
