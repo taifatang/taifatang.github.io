@@ -950,6 +950,8 @@ body {
    font-family: 'Petit Formal Script', Helvetica,Arial,sans-serif;
    font-size:22px;
    color:white;
+   margin-bottom:20px; 
+   color:#383838;
 }
 #inspiration {
     color:white;
