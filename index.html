@@ -475,16 +475,17 @@
         document.getElementById('truelayer-tenure').innerHTML = tenureLabel;
         document.getElementById('footer-year').textContent = now.getFullYear();
 
-        // CV last sync timestamp from PDF Last-Modified header
-        fetch('assets/projects/TaiFaTang.pdf', { method: 'HEAD' }).then(function(res) {
-            var lastMod = res.headers.get('Last-Modified');
-            if (lastMod) {
-                var date = new Date(lastMod);
-                var element = document.getElementById('cv-last-sync');
-                element.textContent = `Last Modified: ${date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}`;
-                element.title = date.toUTCString();
-            }
-        }).catch(function() {});
+        // CV last modified timestamp from GitHub API commit history
+        fetch('https://api.github.com/repos/taifatang/taifatang.github.io/commits?path=assets/projects/TaiFaTang.pdf')
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+                if (data && data[0]) {
+                    var date = new Date(data[0].commit.committer.date);
+                    var element = document.getElementById('cv-last-sync');
+                    element.textContent = `Last Modified: ${date.toLocaleDateString(navigator.language, { day: 'numeric', month: 'short', year: 'numeric' })}`;
+                    element.title = date.toUTCString();
+                }
+            }).catch(function() {});
 
         // Scroll indicator
         var indicator = document.getElementById('scroll-indicator');
