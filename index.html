@@ -479,8 +479,10 @@
         fetch('assets/projects/TaiFaTang.pdf', { method: 'HEAD' }).then(function(res) {
             var lastMod = res.headers.get('Last-Modified');
             if (lastMod) {
-                var formatted = new Date(lastMod).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
-                document.getElementById('cv-last-sync').textContent = 'Last Modified: ' + formatted;
+                var date = new Date(lastMod);
+                var element = document.getElementById('cv-last-sync');
+                element.textContent = `Last Modified: ${date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}`;
+                element.title = date.toUTCString();
             }
         }).catch(function() {});
 
