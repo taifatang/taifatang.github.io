@@ -1143,6 +1143,16 @@ ul.social-buttons li {
 #documents .fa-file-pdf-o {
     color: #bbb;
 }
+#documents .cv-row {
+    display: flex;
+    align-items: center;
+}
+#documents .cv-meta {
+    font-size: 11px;
+    color: #aaa;
+    margin-left: auto;
+    font-style: italic;
+}
 .journey-dual-logo-wrap {
     display: flex;
     flex-direction: column;

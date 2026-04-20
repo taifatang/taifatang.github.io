@@ -347,9 +347,10 @@
                                 <h4 class="panel-title">CV</h4>
                             </div>
                             <div class="list-group">
-                                <a href="assets/projects/TaiFaTang.pdf" class="list-group-item" target="_blank">
+                                <a href="assets/projects/TaiFaTang.pdf" class="list-group-item cv-row" target="_blank">
                                     <i class="fa fa-file-pdf-o fa-fw" style="margin-right: 8px;"></i>
                                     Tai Fa Tang &mdash; Curriculum Vitae
+                                    <span id="cv-last-sync" class="cv-meta">Last Modified: --</span>
                                 </a>
                             </div>
                         </div>
@@ -460,6 +461,7 @@
     (function() {
         // Navbar shrink on scroll
         var navbar = document.querySelector('.navbar-default');
+
         // TrueLayer tenure
         var start = new Date(2022, 3, 1);
         var now = new Date();
@@ -472,6 +474,16 @@
         if (mos > 0) tenureLabel += mos + ' mo' + (mos > 1 ? 's' : '');
         document.getElementById('truelayer-tenure').innerHTML = tenureLabel;
         document.getElementById('footer-year').textContent = now.getFullYear();
+
+        // CV last sync timestamp from PDF Last-Modified header
+        fetch('assets/projects/TaiFaTang.pdf', { method: 'HEAD' }).then(function(res) {
+            var lastMod = res.headers.get('Last-Modified');
+            if (lastMod) {
+                var formatted = new Date(lastMod).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+                document.getElementById('cv-last-sync').textContent = 'Last Modified: ' + formatted;
+            }
+        }).catch(function() {});
+
         // Scroll indicator
         var indicator = document.getElementById('scroll-indicator');
         var icon = indicator.querySelector('i');
