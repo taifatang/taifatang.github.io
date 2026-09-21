@@ -1275,6 +1275,10 @@ ul.social-buttons li {
     transition: opacity 0.3s ease;
 }
 
+.portfolio-banner-overlay.pointer{
+    cursor: pointer;
+}
+
 .portfolio-banner-item:hover .portfolio-banner-overlay,
 .portfolio-banner-item.touch-active .portfolio-banner-overlay {
     opacity: 0;
